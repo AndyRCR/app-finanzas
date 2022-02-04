@@ -1,14 +1,12 @@
 import React from 'react'
-import { Grid, Container, Paper, Avatar, Typography, TextField, Button} from '@material-ui/core'
+import { Grid, Container } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Header from '../../Layout/Header/Header'
 import MovimientosList from '../../Layout/Movimientos/MovimientosList'
-import axios from 'axios'
 import { useHistory } from 'react-router'
 
 const useStyles = makeStyles(theme => ({
     root: {
-        // height: '100vh',
         background: 'linear-gradient(-90deg, #1e3c72, #264C8C, #3a7bd5, #1e3c72)',
         animation: '$animation 5s ease infinite',
         backgroundSize: '500% 500%',
@@ -46,7 +44,6 @@ const useStyles = makeStyles(theme => ({
 
 const Lista = () =>{
     const classes = useStyles()
-    const { push } = useHistory()
 
     return (
         <Grid container component='main' className={classes.root}>
