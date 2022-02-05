@@ -7,8 +7,8 @@ import { useHistory } from 'react-router'
 const useStyles = makeStyles(theme => ({
     root: {
         height: '100vh',
-		background: 'linear-gradient(-90deg, #1e3c72, #264C8C, #3a7bd5, #1e3c72)',
-		animation: '$animation 5s ease infinite',
+		background: 'linear-gradient(-90deg, #1e3c72, #264C8C, #2762B4, #1e3c72)',
+		animation: '$animation 7.5s ease infinite',
 		backgroundSize: '500% 500%',
 		position: 'relative'
     },

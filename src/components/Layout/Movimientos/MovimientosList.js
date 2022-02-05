@@ -16,14 +16,18 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '100px',
       width: '90%',
       margin: 'auto',
+      borderRadius: '10px',
       [theme.breakpoints.down(400 + theme.spacing(2) + 2)]: {
         marginTop: '80px',
         maxHeight: 'none',
     }
   },
   head: {
-    backgroundColor: 'rgba(3,139,199,0.8)',
+    backgroundColor: '#212529',
     fontWeight: 'bold'
+  },
+  title: {
+    color: 'white'
   }
 }));
 
@@ -58,12 +62,12 @@ const MovimientosList = ({ url }) => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead className={classes.head}>
             <TableRow className={classes.headRow}>
-              <TableCell align="center">Movimiento</TableCell>
-              <TableCell align="center">Fecha</TableCell>
-              <TableCell align="center">Motivo</TableCell>
-              <TableCell align="center">Concepto</TableCell>
-              <TableCell align="center">Importe</TableCell>
-              <TableCell align="center">Nota</TableCell>
+              <TableCell className={classes.title} align="center">Movimiento</TableCell>
+              <TableCell className={classes.title} align="center">Fecha</TableCell>
+              <TableCell className={classes.title} align="center">Motivo</TableCell>
+              <TableCell className={classes.title} align="center">Concepto</TableCell>
+              <TableCell className={classes.title} align="center">Importe</TableCell>
+              <TableCell className={classes.title} align="center">Nota</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
