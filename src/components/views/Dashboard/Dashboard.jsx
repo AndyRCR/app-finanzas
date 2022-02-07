@@ -53,7 +53,7 @@ const Dashboard = () => {
         <Grid container component='main' className={classes.root}>
 			<Header />
 			<div className={classes.div}>
-                <iframe title="dataStudio" className={classes.iframe} src="https://datastudio.google.com/embed/reporting/6eacb256-4f92-424f-bc1d-26117ac123ef/page/bIzkC" frameBorder="0"></iframe>
+                <iframe title="dataStudio" className={classes.iframe} src="https://datastudio.google.com/embed/reporting/42a58d1f-cf5e-49e6-926c-21970352691e/page/oaAlC" frameBorder="0"></iframe>
 			</div>
 		</Grid>
     )
