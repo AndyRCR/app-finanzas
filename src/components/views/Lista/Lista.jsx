@@ -11,12 +11,12 @@ const useStyles = makeStyles(theme => ({
         backgroundSize: '500% 500%',
         position: 'relative',
         [theme.breakpoints.down(400 + theme.spacing(2) + 2)]: {
-            // height: 'calc(100%)'
+            height: 'calc(100%)'
         }
     },
     '@media (min-height: 550px)': {
         root: {
-            height: '100vh'
+            // height: '100vh'
         }
     },
     '@keyframes animation': {

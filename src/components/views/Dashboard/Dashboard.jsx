@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Header from '../../Layout/Header/Header'
+import './Dashboard.css'
 
 const useStyles = makeStyles(theme => ({
     root: {
+		width: '100vw',
+		height: '100vh',
 		background: 'linear-gradient(-45deg, #1e3c72, #2a5298, #3a7bd5, #3a6073)',
 		animation: '$animation 5s ease infinite',
 		backgroundSize: '500% 500%',
@@ -20,40 +23,22 @@ const useStyles = makeStyles(theme => ({
 		'100%': {
 			backgroundPosition: '0 50%'
 		}
-	},
-	div: {
-		width: '100vw',
-		display: 'flex',
-		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: 'rgba(0,0,0,0.2)',
-		[theme.breakpoints.down(400 + theme.spacing(2) + 2)]: {
-            height: '100vh',
-        }
-	},
-    iframe: {
-        margin: '100px 0 30px',
-        width: '95%',
-		maxWidth:'1500px',
-        height: '100vw',
-        minHeight: '600px',
-        [theme.breakpoints.down(400 + theme.spacing(2) + 2)]: {
-            height: '100vh',
-            minHeight: 'auto',
-            maxHeight: '450px'
-        }
-    }
+	}
 }))
 
 const Dashboard = () => {
     const classes = useStyles()
+	useEffect(() => {
+		document.querySelector('.div').innerHTML = `<iframe title="dataStudio" class='iframe' src="https://datastudio.google.com/embed/reporting/42a58d1f-cf5e-49e6-926c-21970352691e/page/oaAlC" frameBorder="0"></iframe>`
+	  return () => {
+	  }
+	}, [])
+	
 
     return (
         <Grid container component='main' className={classes.root}>
 			<Header />
-			<div className={classes.div}>
-                <iframe title="dataStudio" className={classes.iframe} src="https://datastudio.google.com/embed/reporting/42a58d1f-cf5e-49e6-926c-21970352691e/page/oaAlC" frameBorder="0"></iframe>
+			<div className="div">
 			</div>
 		</Grid>
     )

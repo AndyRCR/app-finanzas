@@ -1,0 +1,23 @@
+.div {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.2);
+}
+	
+.iframe {
+    margin: 100px 0 30px;
+    width: 95%;
+    max-width:1500px;
+    height: 100vw;
+    min-height: 600px
+}
+
+/* [theme.breakpoints.down(400 + theme.spacing(2) + 2)]: {
+    height: '100vh',
+    minHeight: 'auto',
+    maxHeight: '450px'
+} */

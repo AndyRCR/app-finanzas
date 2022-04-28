@@ -32,16 +32,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const MovimientosList = ({ url }) => {
-  const classes = useStyles();
-  const { data } = useFetch(url);
+  const classes = useStyles()
+  const { data } = useFetch(url)
   
   if(!data) return null
 
   function createData(idmovimientos, movimiento, fecha, motivo, concepto, importe, nota) {
-    return { idmovimientos, movimiento, fecha, motivo, concepto, importe, nota };
+    return { idmovimientos, movimiento, fecha, motivo, concepto, importe, nota }
   }
 
-  let rows = [];
+  let rows = []
   for (let i = 0; i < data.length; i++) {
     rows.push(
       createData(
@@ -53,7 +53,7 @@ const MovimientosList = ({ url }) => {
         data[i]["importe"],
         data[i]["nota"]
       )
-    );
+    )
   }
 
   return (
@@ -76,12 +76,12 @@ const MovimientosList = ({ url }) => {
                 key={row.idmovimientos}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
-                <TableCell align="center">{row.movimiento}</TableCell>
-                <TableCell align="center">{row.fecha}</TableCell>
-                <TableCell align="center">{row.motivo}</TableCell>
-                <TableCell align="center">{row.concepto}</TableCell>
-                <TableCell align="center">{"S/" + row.importe}</TableCell>
-                <TableCell align="center">{row.nota}</TableCell>
+                <TableCell key={row.idmovimientos + '1'} align="center">{row.movimiento}</TableCell>
+                <TableCell key={row.idmovimientos + '2'} align="center">{row.fecha}</TableCell>
+                <TableCell key={row.idmovimientos + '3'} align="center">{row.motivo}</TableCell>
+                <TableCell key={row.idmovimientos + '4'} align="center">{row.concepto}</TableCell>
+                <TableCell key={row.idmovimientos + '5'} align="center">{"S/" + row.importe}</TableCell>
+                <TableCell key={row.idmovimientos + '6'} align="center">{row.nota}</TableCell>
               </TableRow>
             ))}
           </TableBody>
